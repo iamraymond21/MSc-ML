@@ -1,6 +1,13 @@
 %% load USPS data
 % data is represented as a nData*(1+Dimension) matrix
 load('originTrainData.mat');
+% or
+oritinTrainData = load('ziptrain.dat');
+
+% For instance, show the first handwritten digits and its label
+figure;
+imshow(reshape(originTrainData(1,2:end),16,16)');
+disp(['The label of example graph is ' num2str(originTrainData(1,1))]);
 
 % pre-process the data
 % The first nLabeled data points are labeled, and others are unlabeled.
